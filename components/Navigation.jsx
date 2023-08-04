@@ -3,8 +3,7 @@ import { useState, useEffect } from 'react';
 import styles from '@/styles/modules/Navigation.module.scss';
 import Link from 'next/link';
 
-import useElementSize from '@/hooks/useElementSize';
-import useIsMounted from '@/hooks/useIsMounted';
+
 
 import Logo from './icons/Logo';
 import MobileNavigation from './MobileNavigation';
@@ -13,23 +12,11 @@ import classNames from 'classnames';
 import headerNavLinks from '@/data/headerNavLinks';
 
 export default function Navigation() {
-    const [navigationRef, { height }] = useElementSize();
-    const isMounted = useIsMounted();
+   
 
     const [sticky, setSticky] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const isSticky = window.scrollY > 0;
-            setSticky(isSticky);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    
 
     return (
         <header className={`sticky top-0 z-[110] flex items-center justify-between px-4 py-0 sm:py-2 md:py-2 border-b border-gray-200 backdrop-blur-lg backdrop-filter dark:border-gray-700 bg-opacity-30 blur-10`}>
@@ -53,6 +40,7 @@ export default function Navigation() {
                          <Link
             href={link.href}
           className=''
+          
           >
             {link.title}
           </Link>
