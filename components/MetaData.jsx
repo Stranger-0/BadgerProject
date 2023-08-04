@@ -1,8 +1,7 @@
 import Head from 'next/head';
-import useWindowLocation from '@/hooks/useWindowLocation';
 
 export default function MetaData({ ...customMeta }) {
-    const { currentURL } = useWindowLocation();
+    const currentURL = typeof window !== 'undefined' ? window.location.href : '';
     const meta = {
         title: 'Next.js starter',
         description: 'A Next.js starter that includes a collection of reusable components, hooks, and utilities to build amazing projects with complex animations and page transitions using GSAP.',
@@ -14,7 +13,7 @@ export default function MetaData({ ...customMeta }) {
     return (
         <Head>
             <meta charSet="utf-8" />
-        	<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+            <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <title>{meta.title}</title>
             <meta name="description" content={meta.description} />
