@@ -1,4 +1,4 @@
-import styles from '@/styles/modules/HeaderBasic.module.scss';
+
 import Button from './Button';
 
 
