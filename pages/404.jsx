@@ -1,5 +1,5 @@
 import MetaData from '@/components/MetaData';
-import HeaderBasic from '@/components/HeaderBasic';
+
 
 export default function PageNotFound() {
     return (
