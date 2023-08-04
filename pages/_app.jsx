@@ -29,7 +29,7 @@ const victorMono = localFont({
     display: 'swap'
 });
 
-import '@/styles/style.scss';
+
 
 
 import { useEffect } from 'react';
