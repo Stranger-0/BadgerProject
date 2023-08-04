@@ -13,9 +13,7 @@ const handleLogout = () => {
 export default function Gsap() {
     return(
         <>
-            <MetaData
-                title="GSAP"
-            />
+          
  <div className='mt-10 md:mt-16 lg:mt-24 grid gap-16 sm:gap-20 md:gap-20 justify-center md:grid-cols-2'>
   <div className=' w-60 h-60 xl:pl-12 lg:pl-12'>
     <Profile />
